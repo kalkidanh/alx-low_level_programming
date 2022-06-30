@@ -1,2 +1,2 @@
 #!/bin/bash
-int main(void){return (0);}
+gcc $CFILE -E -o c
