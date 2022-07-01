@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- *main - entry point
- *Description: prints if a number is positive or negative
- *return: 0
+ * main - entry point
+ * Description: prints if a number is positive or negative
+ * Return: 0
  */
 int main(void)
 {
