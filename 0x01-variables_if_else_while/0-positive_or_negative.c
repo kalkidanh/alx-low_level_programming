@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
- *main -> assign arandom number to the variable n each time it is executed and prints out
-*based a condition
-*return : always 0
-*/
+ *main - entry point
+ *Description: prints if a number is positive or negative
+ *return: 0
+ */
 int main(void)
 {
 	int n;
