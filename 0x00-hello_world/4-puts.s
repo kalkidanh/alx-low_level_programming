@@ -15,7 +15,7 @@ main:
 	movq	%fs:40, %rax
 	movq	%rax, -8(%rbp)
 	xorl	%eax, %eax
-	movabsq	$7881706611452047394, %rax
+	movabsq	$7881706611452039202, %rax
 	movabsq	$2338328219430578541, %rdx
 	movq	%rax, -64(%rbp)
 	movq	%rdx, -56(%rbp)
