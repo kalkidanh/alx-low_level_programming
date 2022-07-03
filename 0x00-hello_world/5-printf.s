@@ -3,7 +3,7 @@
 	.section	.rodata
 	.align 8
 .LC0:
-	.string	"with proper grammar, but the outcome is a piece of art, "
+	.string	"with proper grammar, but the outcome is a piece of art,"
 	.text
 	.globl	main
 	.type	main, @function
