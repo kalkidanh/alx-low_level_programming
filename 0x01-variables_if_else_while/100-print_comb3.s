@@ -63,7 +63,7 @@ main:
 .L4:
 	movl	$44, %edi
 	call	putchar@PLT
-	movl	$44, %edi
+	movl	$32, %edi
 	call	putchar@PLT
 	jmp	.L5
 .L9:
