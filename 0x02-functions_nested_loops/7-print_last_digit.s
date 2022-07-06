@@ -13,9 +13,25 @@ print_last_digit:
 	.cfi_def_cfa_register 6
 	subq	$32, %rsp
 	movl	%edi, -20(%rbp)
-	cmpl	$0, -20(%rbp)
+	movl	-20(%rbp), %edx
+	movslq	%edx, %rax
+	imulq	$1717986919, %rax, %rax
+	shrq	$32, %rax
+	movl	%eax, %ecx
+	sarl	$2, %ecx
+	movl	%edx, %eax
+	sarl	$31, %eax
+	subl	%eax, %ecx
+	movl	%ecx, %eax
+	sall	$2, %eax
+	addl	%ecx, %eax
+	addl	%eax, %eax
+	subl	%eax, %edx
+	movl	%edx, %eax
+	movl	%eax, -4(%rbp)
+	cmpl	$0, -4(%rbp)
 	jns	.L2
-	negl	-20(%rbp)
+	negl	-4(%rbp)
 .L2:
 	movl	-20(%rbp), %edx
 	movslq	%edx, %rax
