@@ -1,11 +1,11 @@
-#include "main.h"4
+#include "main.h"
 /**
  * _isupper - verifies upper or lower case
  * @c: character
  * Return: 1 or 0
  */
 
-int _ isupper(int c)
+int _isupper(int c)
 {
 	if ((c >= 'A') && (c <= 'Z'))
 		return (1);
