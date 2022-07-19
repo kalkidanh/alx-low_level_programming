@@ -26,18 +26,15 @@ print_chessboard:
 	addq	%rax, %rdx
 	movl	-4(%rbp), %eax
 	cltq
-	addq	%rdx, %rax
-	movzbl	(%rax), %eax
+	movzbl	(%rdx,%rax), %eax
 	movsbl	%al, %eax
 	movl	%eax, %edi
-	movl	$0, %eax
 	call	_putchar@PLT
 	addl	$1, -4(%rbp)
 .L3:
 	cmpl	$7, -4(%rbp)
 	jle	.L4
 	movl	$10, %edi
-	movl	$0, %eax
 	call	_putchar@PLT
 	addl	$1, -8(%rbp)
 .L2:
