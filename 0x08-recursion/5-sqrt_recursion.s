@@ -44,6 +44,42 @@ find_sqrt:
 	.cfi_endproc
 .LFE0:
 	.size	find_sqrt, .-find_sqrt
+	.globl	_sqrt_recursion
+	.type	_sqrt_recursion, @function
+_sqrt_recursion:
+.LFB1:
+	.cfi_startproc
+	endbr64
+	pushq	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp
+	.cfi_def_cfa_register 6
+	subq	$32, %rsp
+	movl	%edi, -20(%rbp)
+	movl	$0, -4(%rbp)
+	cmpl	$0, -20(%rbp)
+	jns	.L6
+	movl	$-1, %eax
+	jmp	.L7
+.L6:
+	cmpl	$1, -20(%rbp)
+	jne	.L8
+	movl	$1, %eax
+	jmp	.L7
+.L8:
+	movl	-4(%rbp), %edx
+	movl	-20(%rbp), %eax
+	movl	%edx, %esi
+	movl	%eax, %edi
+	call	find_sqrt
+.L7:
+	leave
+	.cfi_def_cfa 7, 8
+	ret
+	.cfi_endproc
+.LFE1:
+	.size	_sqrt_recursion, .-_sqrt_recursion
 	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
 	.section	.note.GNU-stack,"",@progbits
 	.section	.note.gnu.property,"a"
