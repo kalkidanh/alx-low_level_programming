@@ -3,7 +3,7 @@
 
 /**
  * File: 3-function_like_macro.h
- * Desc: define ABS(x)
+ * Desc: define ABS(x) to find the value of x.
  *
  */
 
