@@ -32,19 +32,24 @@ sum_them_all:
 	movq	%fs:40, %rax
 	movq	%rax, -184(%rbp)
 	xorl	%eax, %eax
-	movl	$0, -212(%rbp)
+	movl	$0, -216(%rbp)
+	cmpl	$0, -228(%rbp)
+	jne	.L3
+	movl	$0, %eax
+	jmp	.L9
+.L3:
 	movl	$8, -208(%rbp)
 	movl	$48, -204(%rbp)
 	leaq	16(%rbp), %rax
 	movq	%rax, -200(%rbp)
 	leaq	-176(%rbp), %rax
 	movq	%rax, -192(%rbp)
-	movl	$0, -216(%rbp)
-	jmp	.L3
-.L6:
+	movl	$0, -212(%rbp)
+	jmp	.L5
+.L8:
 	movl	-208(%rbp), %eax
 	cmpl	$47, %eax
-	ja	.L4
+	ja	.L6
 	movq	-192(%rbp), %rax
 	movl	-208(%rbp), %edx
 	movl	%edx, %edx
@@ -52,25 +57,26 @@ sum_them_all:
 	movl	-208(%rbp), %edx
 	addl	$8, %edx
 	movl	%edx, -208(%rbp)
-	jmp	.L5
-.L4:
+	jmp	.L7
+.L6:
 	movq	-200(%rbp), %rax
 	leaq	8(%rax), %rdx
 	movq	%rdx, -200(%rbp)
-.L5:
+.L7:
 	movl	(%rax), %eax
-	addl	%eax, -212(%rbp)
-	addl	$1, -216(%rbp)
-.L3:
-	movl	-216(%rbp), %eax
-	cmpl	-228(%rbp), %eax
-	jb	.L6
+	addl	%eax, -216(%rbp)
+	addl	$1, -212(%rbp)
+.L5:
 	movl	-212(%rbp), %eax
+	cmpl	-228(%rbp), %eax
+	jb	.L8
+	movl	-216(%rbp), %eax
+.L9:
 	movq	-184(%rbp), %rcx
 	xorq	%fs:40, %rcx
-	je	.L8
+	je	.L10
 	call	__stack_chk_fail@PLT
-.L8:
+.L10:
 	leave
 	.cfi_def_cfa 7, 8
 	ret
