@@ -18,9 +18,9 @@ return (len);
 
 /**
 *_strcopy - copy string pointed by src into dest
-*@dest:string copy buffer
+*@dest: string copy buffer
 *@src: string to copy buffer
-*Return:return string copy
+*Return: return string copy
 */
 char *_strcopy(char *dest, char *src)
 {
