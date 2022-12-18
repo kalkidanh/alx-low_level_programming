@@ -2,9 +2,10 @@
 
 
 /**
-*_strlen - return the length of string
-*@str: string to count
-*Return: length of string
+*_strlen - returns length of
+*a string
+*@str: string to be counted
+*Return: returns length of string
 */
 int _strlen(char *str)
 {
@@ -17,10 +18,11 @@ return (len);
 
 
 /**
-*_strcopy - copy string pointed by src into dest
-*@dest: string copy buffer
-*@src: string to copy buffer
-*Return: return string copy
+*_strcopy - copy string pointed by src
+*into dest variable
+*@dest:buffer storing string copy
+*@src: buffer storing string to copy
+*Return:returns copied string
 */
 char *_strcopy(char *dest, char *src)
 {
@@ -37,11 +39,12 @@ return (dest);
 
 
 /**
-*new_dog - create a new dog
-*@name: name of dog
-*@age: age of dog
-*@owner: owner of dog
-*Return: return new dog or NULL
+*new_dog - creates a new dog
+*@name: name of new dog
+*@age: age of new dog
+*@owner: owner of new dog
+*Return: returns NULL in case
+*of failure
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
