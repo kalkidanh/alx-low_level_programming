@@ -2,11 +2,11 @@
 
 
 /**
-*_strlen - returns length of
-*a string
-*@str: string to be counted
-*Return: returns length of string
-*/
+ * _strlen - return string length
+ * @str: string to remove
+ * Return: length of string
+ */
+
 int _strlen(char *str)
 {
 int len = 0;
@@ -18,12 +18,12 @@ return (len);
 
 
 /**
-*_strcopy - copy string pointed by src
-*into dest variable
-*@dest:buffer storing string copy
-*@src: buffer storing string to copy
-*Return:returns copied string
-*/
+ * _strcopy - copy string to dest
+ * @dest: destnatin buffer
+ * @src: source buffer
+ * Return: string copy
+ */
+
 char *_strcopy(char *dest, char *src)
 {
 int index = 0;
@@ -39,13 +39,13 @@ return (dest);
 
 
 /**
-*new_dog - creates a new dog
-*@name: name of new dog
-*@age: age of new dog
-*@owner: owner of new dog
-*Return: returns NULL in case
-*of failure
-*/
+ * new_dog - create new dog
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
+ * Return: new dog or NULL
+ */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *doggo;
