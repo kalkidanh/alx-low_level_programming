@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-* wildcmp - compare two strings and return 1 if they are the same
+* wildcmp - compare two strings and return 1 if they are the same:
 * @s1: string to be checked
 * @s2: pattern to be used
 *
-* Return: 1 or 0 
+* Return: 1 or 0
 */
 
 int wildcmp(char *s1, char *s2)
