@@ -6,7 +6,7 @@
  * Return: 1 or 0
  */
 
-int get_endiannes(void)
+int get_endianness(void)
 {
 	unsigned int t = 1;
 	char *endian = (char *)&t;
